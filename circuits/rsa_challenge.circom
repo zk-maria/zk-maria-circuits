@@ -24,9 +24,9 @@ template CheckAge() {
    signal output isGreaterOrEqual;
 
    component gt = GreaterThan(5);
-    gt.in[0] <== age;
-    gt.in[1] <== 18;
-	0 === gt.out;
+    gt.in[0] <== 18;
+    gt.in[1] <== age;
+	 1 === gt.out;
     
    isGreaterOrEqual <== gt.out;
 }

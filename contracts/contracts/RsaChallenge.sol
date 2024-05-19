@@ -40,7 +40,7 @@ contract RsaChallenge {
         // pED expiry date
         uint256[2] memory pC = [proof[6], proof[7]];
 
-        require(verifier.verifyProof(pA, pB, pC, [requestId]), "Invalid proof");
+        require(verifier.verifyProof(pNA, pAge, pC, [requestId]), "Invalid proof");
 
         requestsCompleted[requestId] = msg.sender;
         emit Verified(msg.sender, requestId);
