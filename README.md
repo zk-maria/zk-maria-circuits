@@ -1,4 +1,6 @@
-<img src="zkmaria.jpeg" width="500">
+<div style="text-align: center;">
+    <img src="zkmaria.jpeg" width="500" alt="zkmarialogo">
+</div>
 # ZK-Maria
 
 Leveraging zk proofs to ensure privacy while verifying age, nationality, and valid ID for secure government authorizations.
