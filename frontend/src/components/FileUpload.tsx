@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import { Button, InputGroup, Form } from 'react-bootstrap';
 
 const FileUpload = (props: any) => {
     // Component logic goes here
@@ -32,13 +33,20 @@ const FileUpload = (props: any) => {
 
     return (
         // JSX markup goes here
-        <div>
-            <h2>KYC Verification</h2>
-            <p>Upload a valid ID document to verify your identity.</p>
-            <div>
-                <input type="file" onChange={handleFileChange} />
-                <button onClick={handleUpload}>Upload</button>
-            </div>
+        <div className='mx-auto my-4'>
+            <h2 className='my-4'>KYC Verification</h2>
+            <p className=''>Upload a valid ID document to verify your identity.</p>
+            <InputGroup className="mb-3">
+                    <Form.Control
+                    placeholder="File"
+                    aria-label="file"
+                    aria-describedby="basic-addon1"
+                    type="file" onChange={handleFileChange}
+                    />
+                    <InputGroup.Text id="basic-addon1">
+                    <Button className='btn btn-primary' onClick={handleUpload}>Upload</Button>
+                </InputGroup.Text>
+                </InputGroup>
         </div>
     );
 };

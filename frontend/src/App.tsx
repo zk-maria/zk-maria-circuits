@@ -3,7 +3,8 @@ import { useState, useEffect } from "react";
 import { createClient } from "@supabase/supabase-js";
 import { Auth } from "@supabase/auth-ui-react";
 import { ThemeSupa } from "@supabase/auth-ui-shared";
-// import 'dotenv/config';
+
+import { Button } from 'react-bootstrap';
 
 import RsaChallengeComponent from './RsaChallengeComponent';
 import FileUpload from './components/FileUpload';
@@ -54,9 +55,9 @@ function App() {
   } else {
 
     return (
-      <div>
+      <div className='container'>
         <div>Logged in!</div>
-        <button onClick={() => supabase.auth.signOut()}>Sign out</button>
+        <Button onClick={() => supabase.auth.signOut()}>Sign out</Button>
         <FileUpload />
         <NewRequest props={session} />
       </div>
